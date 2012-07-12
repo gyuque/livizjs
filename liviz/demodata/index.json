@@ -1,0 +1,73 @@
+[
+	{
+		"url": "splash.dot",
+		"delay": 1900
+	},
+
+	{
+		"url": "g1.dot",
+		"delay": 900,
+		"slow": true
+	},
+
+	{
+		"url": "g2.dot",
+		"delay": 900
+	},
+
+	{
+		"url": "g3.dot",
+		"delay": 400
+	},
+
+	{
+		"url": "g4.dot",
+		"delay": 0
+	},
+
+	{
+		"url": "g1.dot",
+		"delay": 900
+	},
+
+	{
+		"url": "prog-splash.dot",
+		"delay": 900
+	},
+
+	{
+		"url": "prog.dot",
+		"delay": 900,
+		"prog": true
+	},
+
+	{
+		"url": "h-splash.dot",
+		"delay": 900
+	},
+
+	{
+		"url": "hist.dot",
+		"delay": 0
+	},
+
+	{
+		"url": "hist2.dot",
+		"delay": 900
+	},
+
+	{
+		"url": "th0.dot",
+		"delay": 900
+	},
+
+	{
+		"url": "th1.dot",
+		"delay": 900
+	},
+
+	{
+		"url": "th2.dot",
+		"delay": 900
+	}
+]

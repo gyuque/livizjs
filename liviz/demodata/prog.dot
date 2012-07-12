@@ -1,0 +1,13 @@
+digraph testgraph{ranksep=0.3;
+ 1 -> 2 -> 3 -> 4 -> 5; 
+ A -> B; 
+ A -> C -> E -> Y; 
+ A -> D -> G; 
+ A -> X -> Y -> Z; 
+ B -> Z -> A; 
+ B -> G; 
+ 4 -> C; 
+ {rank=same; A; 1;} 
+ {rank=same; D; 5;} 
+ {rank=same; X; E; 4;} 
+}

@@ -1,0 +1,158 @@
+h1 .leadtext {
+	display: block;
+	font-size: 50%;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	background: #fff url(images/tex-canvas.png);
+}
+
+body, html {
+	margin: 0;
+	padding: 0;
+}
+
+body.man-page {
+	margin: 1em;
+}
+
+#dot-src {
+	background-color: rgba(0,0,0,0.02);
+	box-shadow: 0 1px 6px 1px rgba(0,0,0,0.1) inset;
+	border: none;
+	padding: 0.4em;
+	color: rgba(0,0,0,0.5);
+	border-radius: 4px;
+	font-size: 19px;
+}
+
+#dot-src:focus {
+	background-color: rgba(255,255,255,0.7);
+	background: -moz-linear-gradient(top, rgba(245,245,245,0.8), rgba(255,255,255,0.7));
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(245,245,245,0.8)), to(rgba(255,255,255,0.7)));
+	box-shadow: 0 1px 4px 1px rgba(0,0,0,0.4);
+	color: #000;
+	outline-color: #976;
+}
+
+.jv-error-messages-box p {
+	margin: 0;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 2px;
+	color: #d11;
+}
+
+#coding-area {
+	position: fixed;
+	top: 3px;
+	left: 8px;
+}
+
+
+.app-page ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.app-page ::-webkit-scrollbar-track {
+    width: 10px;
+    border-radius: 8px;
+}
+
+.app-page ::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+	background-color: rgba(0,0,0,0.3);
+	border: 1px solid rgba(255,255,255,0.4);
+}
+
+.app-page ::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+
+.progress-box-canvas {
+	opacity: 0;
+	display: none;
+	-webkit-transition-property: opacity;
+	-webkit-transition-duration: 0.3s;
+	-webkit-transition-timing-function: linear;
+	-moz-transition-property: opacity;
+	-moz-transition-duration: 0.3s;
+	-moz-transition-timing-function: linear;
+}
+
+.jsv-more-button {
+	position: absolute;
+	bottom: 31px;
+	right: 28px;
+	cursor: pointer;
+	opacity: 0.7;
+}
+
+.jsv-more-button:hover {
+	opacity: 1;
+}
+
+.jsv-play-button {
+	opacity: 0.7;
+	width:  24px;
+	height: 24px;
+	background: url(images/gobutton.png) 0px 0px no-repeat;
+	position: absolute;
+	bottom: 31px;
+	right: 4px;
+	cursor: pointer;
+}
+
+.jsv-play-button:hover {
+	opacity: 1;
+}
+
+.jsv-play-button:active {
+	opacity: 0.9;
+}
+
+.jsv-play-button.disabled,
+.jsv-play-button.disabled:hover
+.jsv-play-button.disabled:active {
+	opacity: 0.2;
+	cursor: default;
+}
+
+#dot-options {
+	width: 10em;
+	border-radius: 4px;
+	background-color: #fff;
+	box-shadow: 0 1px 4px 1px rgba(0,0,0,0.4);
+	position: absolute;
+	bottom: 56px;
+	right: 4px;
+	font-size: 13px;
+	display: none;
+}
+
+#dot-options ul {
+	list-style: none;
+	padding: 3px;
+	margin: 0;
+}
+
+#dot-options li {
+	padding: 3px 4px;
+	margin: 0;
+	cursor: pointer;
+}
+
+#dot-options li:hover {
+	background-color: #654;
+	color: #fff;
+}
+
+#test-button{display:none;}
+
+.man-page p img {vertical-align: middle; border: none;}
+.man-page em {font-weight: bold;}
+.man-page h2 {border-top: 1px solid #000; padding-top: 0.2em;}
+.credits h3{font-size: 120%; margin-bottom: 0.1em;}
+.credits p{font-size: 90%; margin-top: 0.1em;}

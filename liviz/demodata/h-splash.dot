@@ -1,0 +1,17 @@
+digraph {
+	{node [shape=plaintext, fontsize=26];
+		DEMO;
+	}
+
+	{node [shape=plaintext, fontsize=22];
+		"The History of Mozilla";
+	}
+
+	{rank=same;
+		DEMO; "The History of Mozilla";
+	}
+
+	{edge [arrowhead=none]
+		DEMO -> "The History of Mozilla";
+	}
+}

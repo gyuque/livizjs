@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Content-Style-Type" content="text/css" />
+		<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	    <link rel="stylesheet" type="text/css" href="./jsviz.css"></link>
+
+		<script type="text/javascript" src="./js/workered-jsviz.js?v=2"></script>
+		<script type="text/javascript" src="./js/jquery.js"></script>
+		<script type="text/javascript" src="./js/progress-view.js?v=2"></script>
+		<script type="text/javascript" src="./js/progress-model.js?v=2"></script>
+		<script type="text/javascript" src="./js/worker-stopgo.js?v=2"></script>
+		<script type="text/javascript" src="./js/global-util.js?v=2"></script>
+		<script type="text/javascript" src="./js/jsviz.js?v=2"></script>
+		<script type="text/javascript" src="./js/errorsink.js?v=2"></script>
+		<script type="text/javascript" src="./js/jsviz-ui.js?v=2"></script>
+		<script type="text/javascript" src="./js/graph-model.js?v=2"></script>
+		<script type="text/javascript" src="./js/curve-tween.js?v=2"></script>
+		<script type="text/javascript" src="./js/difftype.js?v=2"></script>
+		<title>Liviz.js (JSViz)</title>
+	</head>
+	<body class="app-page" onload="void w_launch()">
+		<svg id="graph-svg" style="outline: none;" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="mainGraphContainer" /></svg>
+		<div id="coding-area">
+			<img alt="Liviz.js" src="images/livizlogo.png" /><br />
+			<textarea id="dot-src" style="width: 260px;height: 300px;">
+digraph testgraph{
+ {node[shape=none,
+       fontsize=23]
+  "Welcome to Liviz.js!"
+ }
+ {node[shape=none]
+  "Interactive GraphViz on your browser"
+ }
+ {edge[color=transparent]
+  "Welcome to Liviz.js!" ->
+  "Interactive GraphViz on your browser"
+ }
+ 
+ A -> B -> C -> D -> E;
+ B -> D;
+ 
+ {node[shape=box];
+   1 -> 2 -> 3;
+ }
+ 
+ E -> 1;2 -> C;
+ {rank=same; 1; A;}
+ {rank=same; 3; D;}
+}
+
+			</textarea> <button id="test-button" style="font-size:40%; position: relative; left: -7em; top: -1em;">Test</button>
+			<div id="dot-options">
+				<ul>
+					<li id="cmd-prog">Show progress</li>
+					<li id="cmd-slow">Run slowly</li>
+					<li id="cmd-demo">Take a tour</li>
+					<li id="cmd-about">About...</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>

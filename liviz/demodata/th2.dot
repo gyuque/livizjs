@@ -1,0 +1,18 @@
+digraph {
+	{
+		node [shape=plaintext, label=""];
+		dmy;
+	}
+
+	{
+		edge [color=transparent];
+		rank=same;
+		node[margin=0,0,width=0.5,height=0.1,fontsize=26]
+		T;H;A;N;K;Y;O;U;
+	}
+
+	{
+		edge [color=transparent];
+		dmy -> T;
+	}
+}

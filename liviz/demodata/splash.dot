@@ -1,0 +1,11 @@
+digraph {
+	{node [shape=plaintext, fontsize=32];
+		"GraphViz"
+	}
+
+	{node [shape=plaintext, fontsize=62];
+		"Liviz.js"
+	}
+
+	"GraphViz" -> "Liviz.js" [label=" Interactive GraphViz on your browser."];
+}

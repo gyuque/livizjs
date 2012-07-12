@@ -1,0 +1,4 @@
+digraph {
+	node [shape=plaintext, fontsize=32];
+	"Progress Viewer Demo"
+}

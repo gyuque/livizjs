@@ -1,0 +1,21 @@
+digraph {
+	{
+		node[margin=0,0,width=0.5,height=0.1,fontsize=26] 
+		A;B;C;D;E; 
+		F;G;H;I;J; 
+		K;L;M;N;O; 
+		P;Q;R;S;T; 
+		U;V;W;X;Y; 
+	}
+
+	{rank=same; A;B;C;D;E;} 
+	{rank=same; F;G;H;I;J;} 
+	{rank=same; K;L;M;N;O;} 
+	{rank=same; P;Q;R;S;T;} 
+	{rank=same; U;V;W;X;Y;} 
+
+	{
+		edge [color=transparent];
+		A -> F -> K -> P -> U;
+	}
+}

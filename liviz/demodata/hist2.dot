@@ -1,0 +1,88 @@
+digraph {
+ ranksep=0.2;
+ node [height=0.375];
+
+ {
+  node [shape=plaintext, fontsize=12];
+  edge [arrowhead=none]
+  2002 -> 2004 -> 2005 -> 2006 -> 2007 -> 2009 -> 2010 -> 2011 -> 2012
+ }
+
+ {
+  node [shape=box,style=bold,width=2.0];
+  "Phoenix 0.1";
+  "Firefox 1.0";
+  "Firefox 10";
+ }
+
+ {
+  node [shape=box,width=2.0];
+  "Firefox 1.5";
+  "Firefox 2.0";
+  "Firefox 3.0";
+  "Firefox 3.5";
+  "Firefox 3.6";
+  "Firefox 4";
+  "Firefox 5";
+  "Firefox 6";
+  "Firefox 7";
+  "Firefox 8";
+  "Firefox 9";
+ }
+
+ {
+  node [shape=plaintext];
+  "First Release";
+  "Version 1.0 Release";
+  "SVG";
+  "Javascript 1.7";
+  "Gecko 1.9";
+  "TraceMonkey";
+  "Persona";
+  "Gecko 2.0, WebGL";
+  "CSS Animations";
+  "Server-Sent Events";
+  "Canvas HW Acceleration";
+  "HTML5 Context Menu";
+  "JS Type Inference";
+  "CSS 3D Transforms";
+ }
+
+  "Phoenix 0.1" -> "Firefox 1.0" -> "Firefox 1.5" -> "Firefox 2.0" -> "Firefox 3.0" -> "Firefox 3.5";
+  "Firefox 3.5" -> "Firefox 3.6" -> "Firefox 4" -> "Firefox 5" -> "Firefox 6" -> "Firefox 7" -> "Firefox 8";
+  "Firefox 8" -> "Firefox 9" -> "Firefox 10";
+
+ { rank=same; "Phoenix 0.1"; "First Release"; 2002} 
+ { rank=same; "Firefox 1.0"; "Version 1.0 Release"; 2004} 
+ { rank=same; "Firefox 1.5"; "SVG"; 2005} 
+ { rank=same; "Firefox 2.0"; "Javascript 1.7"; 2006} 
+ { rank=same; "Firefox 3.0"; "Gecko 1.9"; 2007} 
+ { rank=same; "Firefox 3.5"; "TraceMonkey"; 2009} 
+ { rank=same; "Firefox 3.6"; "Persona"; 2010} 
+ { rank=same; "Firefox 4";  "Gecko 2.0, WebGL"; 2011} 
+ { rank=same; "Firefox 5";  "CSS Animations";} 
+ { rank=same; "Firefox 6";  "Server-Sent Events";} 
+ { rank=same; "Firefox 7";  "Canvas HW Acceleration";} 
+ { rank=same; "Firefox 8";  "HTML5 Context Menu";} 
+ { rank=same; "Firefox 9";  "JS Type Inference";} 
+ { rank=same; "Firefox 10"; "CSS 3D Transforms"; 2012} 
+
+ {
+  edge [style=dashed]
+  edge [arrowhead=none]
+  "Phoenix 0.1" -> "First Release";
+  "Firefox 2.0" -> "Javascript 1.7";
+  "Firefox 1.0" -> "Version 1.0 Release";
+  "Firefox 1.5" -> "SVG";
+  "Firefox 3.0" -> "Gecko 1.9";
+  "Firefox 3.5" -> "TraceMonkey";
+  "Firefox 3.6" -> "Persona";
+  "Firefox 4"   -> "Gecko 2.0, WebGL";
+  "Firefox 5"   -> "CSS Animations";
+  "Firefox 6"   -> "Server-Sent Events";
+  "Firefox 7"   -> "Canvas HW Acceleration";
+  "Firefox 8"   -> "HTML5 Context Menu";
+  "Firefox 9"   -> "JS Type Inference";
+  "Firefox 10"  -> "CSS 3D Transforms";
+ }
+}

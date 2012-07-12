@@ -1,0 +1,11 @@
+{
+  "app": {
+    "launch": {
+      "local_path": "index.html"
+    }
+  },
+  "name": "Liviz.js(Local Test)",
+  "version": "1.0",
+  "description": "Graphviz on Browser",
+  "permissions": []
+}

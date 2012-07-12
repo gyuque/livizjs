@@ -1,0 +1,69 @@
+digraph {
+ ranksep=0.3;
+ node [height=0.375];
+
+ {
+  node [shape=plaintext, label=""];
+  Year;
+ }
+
+ {
+  node [shape=plaintext, fontsize=22];
+  "The History of Mozilla";
+ }
+
+ {
+  node [shape=plaintext, fontsize=12];
+  edge [arrowhead=none]
+  1993 -> 1994 -> 1995 -> 1996 -> 1997
+  1997 -> 1998 -> 1999 -> 2000 -> 2001
+  2001 -> 2002
+ }
+
+ {
+  node [shape=box];
+  "NCSA Mosaic";
+  "Netscape Navigator 1.0";
+  "Netscape Navigator 2.0";
+  "Netscape Navigator 3.0";
+  "Netscape Navigator 4.0";
+  "Internet Explorer 1.0";
+  "Mozilla 1.0";
+ }
+
+ {
+  node [shape=box,style=bold,width=2.0];
+  "Phoenix 0.1";
+ }
+
+ {
+  node [shape=plaintext];
+  edge [color=transparent]
+  Year -> 1993;
+  Year -> "The History of Mozilla";
+ }
+
+ { rank = same; Year; "The History of Mozilla"; }
+ { rank = same; 1993; "NCSA Mosaic"; }
+ { rank = same; 1994; "Netscape Navigator 1.0"; }
+ { rank = same; 1995; "Internet Explorer 1.0"; "Netscape Navigator 2.0";}
+ { rank = same; 1996; "Netscape Navigator 3.0";}
+ { rank = same; 1997; "Netscape Navigator 4.0";}
+ { rank = same; 2002; "Mozilla 1.0"; "Phoenix 0.1";}
+
+ "NCSA Mosaic" -> "Internet Explorer 1.0";
+ {
+  edge [style=dashed]
+  "NCSA Mosaic" -> "Netscape Navigator 1.0";
+  "Netscape Navigator 4.0" -> "Mozilla 1.0";
+ }
+
+ {
+  edge [style=dashed,minlen=3]
+  "Mozilla 1.0" -> "Phoenix 0.1";
+ }
+
+ "Netscape Navigator 1.0" -> "Netscape Navigator 2.0";
+ "Netscape Navigator 2.0" -> "Netscape Navigator 3.0";
+ "Netscape Navigator 3.0" -> "Netscape Navigator 4.0";
+}
