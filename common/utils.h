@@ -12,7 +12,25 @@
  *************************************************************************/
 
 #ifndef _UTILS_H
-#define _UTILS_H 1
+#define _UTILS_H
+
+#include "render.h"
+#include "agxbuf.h"
+#include "htmltable.h"
+#include "entities.h"
+#include "logic.h"
+#include "gvc.h"
+
+
+#ifdef WIN32
+#include "libltdl/lt_system.h"
+#endif
+#ifndef WIN32
+#include <unistd.h>
+#include <string.h>
+#endif
+#include <ctype.h>
+
 
 #ifdef __cplusplus
 extern "C" {

@@ -18,6 +18,10 @@
 #endif
 #define INITIAL_XDOT_CAPACITY 512
 
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+
 typedef enum {
     xd_left, xd_center, xd_right
 } xdot_align;

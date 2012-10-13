@@ -12,9 +12,6 @@
  *************************************************************************/
 
 #include <xdot.h>
-#include <stdlib.h>
-#include <string.h>
-#include <ctype.h>
 
 #define NEW(t)           (t*)calloc(1, sizeof(t))
 #define N_NEW(n,t)       (t*)calloc((n), sizeof(t))
@@ -533,8 +530,9 @@ typedef struct {
     int dyna;			/* true if buffer is malloc'ed */
 } agxbuf;
 
-#define agxbputc(X,C) ((((X)->ptr >= (X)->eptr) ? agxbmore(X,1) : 0), \
-          (int)(*(X)->ptr++ = ((unsigned char)C)))
+//#define agxbputc(X,C) ((((X)->ptr >= (X)->eptr) ? agxbmore(X,1) : 0), (int)(*(X)->ptr++ = ((unsigned char)C)))
+#define agxbputc(X,C) ((((X)->ptr >= (X)->eptr) ? agxbmore(X,1) : 0), (*(X)->ptr++ = ((unsigned char)C)))
+
 #define agxbuse(X) (agxbputc(X,'\0'),(char*)((X)->ptr = (X)->buf))
 
 static void agxbinit(agxbuf * xb, unsigned int hint, unsigned char *init)

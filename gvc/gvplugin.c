@@ -59,7 +59,7 @@ api_t gvplugin_api(char *str)
 /* translate api_t into string name, or NULL */
 char *gvplugin_api_name(api_t api)
 {
-    if (api < 0 || api >= ARRAY_SIZE(api_names))
+    if (api >= ARRAY_SIZE(api_names))
 	return NULL;
     return api_names[api];
 }
@@ -77,8 +77,8 @@ boolean gvplugin_install(GVC_t * gvc, api_t api, const char *typestr,
 #define TYPSIZ 63
     char *p, pins[TYPSIZ+1], pnxt[TYPSIZ+1];
 
-    if (api < 0)
-	return FALSE;
+    //if (api < 0)
+	//return FALSE;
 
     strncpy(pins, typestr, TYPSIZ);
     if ((p = strchr(pins, ':')))
@@ -134,8 +134,8 @@ static boolean gvplugin_activate(GVC_t * gvc, api_t api,
     gvplugin_available_t **pnext;
 
 
-    if (api < 0)
-	return FALSE;
+    //if (api < 0)
+	//return FALSE;
 
     /* point to the beginning of the linked list of plugins for this api */
     pnext = &(gvc->apis[api]);
@@ -265,8 +265,8 @@ gvplugin_available_t *gvplugin_load(GVC_t * gvc, api_t api, const char *str)
     api_t apidep;
 
     /* check for valid apis[] index */
-    if (api < 0)
-	return NULL;
+    //if (api < 0)
+	//return NULL;
 
     if (api == API_device
 	|| api == API_loadimage) /* api dependencies - FIXME - find better way to code these *s */
@@ -359,8 +359,8 @@ char *gvplugin_list(GVC_t * gvc, api_t api, const char *str)
     static agxbuf xb;
 
     /* check for valid apis[] index */
-    if (api < 0)
-	return NULL;
+    //if (api < 0)
+	//return NULL;
 
     if (first) {
 	agxbinit(&xb, 0, 0);
