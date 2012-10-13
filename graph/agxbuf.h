@@ -18,6 +18,11 @@ extern "C" {
 #ifndef         AGXBUF_H
 #define         AGXBUF_H
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
 /* Extensible buffer:
  *  Malloc'ed memory is never released until agxbfree is called.
  */
@@ -64,8 +69,8 @@ extern "C" {
  * Add character to buffer.
  *  int agxbputc(agxbuf*, char)
  */
-#define agxbputc(X,C) ((((X)->ptr >= (X)->eptr) ? agxbmore(X,1) : 0), \
-          (int)(*(X)->ptr++ = ((unsigned char)C)))
+//#define agxbputc(X,C) ((((X)->ptr >= (X)->eptr) ? agxbmore(X,1) : 0), (int) (*(X)->ptr++ = ((unsigned char)C)))
+#define agxbputc(X,C) ((((X)->ptr >= (X)->eptr) ? agxbmore(X,1) : 0), (*(X)->ptr++ = ((unsigned char)C)))
 
 /* agxbuse:
  * Null-terminates buffer; resets and returns pointer to data;

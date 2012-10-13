@@ -50,6 +50,7 @@ extern "C" {
 #include "gvcjob.h"		/* must follow gvcext.h (in types.h) */
 #include "gvcint.h"		/* must follow gvcext.h (in types.h) */
 #include "gvcproc.h"		/* must follow gvcext.h (in types.h) */
+#include "geom.h"
 
     typedef struct epsf_s {
 	int macro_id;

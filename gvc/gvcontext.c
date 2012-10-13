@@ -25,7 +25,6 @@
 
 #include <stdlib.h>
 
-#include "builddate.h"
 #include "types.h"
 #include "gvplugin.h"
 #include "gvcjob.h"

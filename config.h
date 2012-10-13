@@ -1,3 +1,6 @@
+//#define MIN(a,b) (((a)<(b))?(a):(b))
+//#define MAX(a,b) (((a)>(b))?(a):(b))
+
 #define GVPLUGIN_CONFIG_FILE "config6"
 #define GVPLUGIN_VERSION 6
 #define PACKAGE "graphviz"
@@ -20,3 +23,4 @@
 #define DEFAULT_DPI 96
 
 #define HAVE_STRDUP 1
+#define HAVE_STRINGS_H 1

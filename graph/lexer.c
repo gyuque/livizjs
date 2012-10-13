@@ -145,7 +145,7 @@ static char *scan_token(unsigned char *p, unsigned char *token)
     }
     *q = '\0';
 
-    return p;
+    return (char*) *p;
 }
 
 static char *scan_num(char *p, char *token)

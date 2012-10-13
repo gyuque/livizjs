@@ -13,6 +13,7 @@
 
 
 #include "render.h"
+#include <string.h>
 
 #define EPSILON .0001
 
